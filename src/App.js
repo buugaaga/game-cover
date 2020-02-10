@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import GameBackground from './components/GameBackground'
+import GameCore from './components/GameCore'
 import BoxHeader from './components/BoxHeader'
 
 import  sideBg  from './images/side-bg.jpg'
@@ -41,7 +41,7 @@ function App() {
     <Container>
       <div>
         <BoxHeader />
-        <GameBackground /> 
+        <GameCore /> 
       </div>
     </Container>
   );
