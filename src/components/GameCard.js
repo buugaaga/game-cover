@@ -8,31 +8,33 @@ const CardConteiner = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: start;
+  margin: 0;
   height: 70px;
   width: 100%;
-  padding: 20px;
- 
+  padding: 12px 30px;
   > div:nth-of-type(1) {
     flex: 1;
-    height: 60px;
+    height: 100%;
     img {
       height: 100%;
-      transform: rotate(30deg);
+      width: 100%;
+      transform: rotate(20deg);
     }
   }
   div:nth-of-type(2) {
-    display: flex;
+    padding-left: 20px;
+    padding-top: 0px;
     flex-flow: column nowrap;
-    justify-content: space-between;
     flex: 3;
     p { 
-      display: block;
-      padding-right: 80px;
+      display: inline;
+      padding-right: 20px;
+      padding-bottom: 20px;
     }
   }
 `
 
-export default function GameCard({ pathImg, progress, isFull, phrasa }) {
+export default function GameCard({ pathImg, progress, isFull, setClosed, phrasa }) {
   return (
     <CardConteiner>
       <div>
@@ -42,7 +44,7 @@ export default function GameCard({ pathImg, progress, isFull, phrasa }) {
         <p><b>{phrasa}</b></p>
         <ProgressBar progress={progress} />
       </div>
-      <Shirt isFull={isFull} />
+      <Shirt isFull={isFull} setClosed={setClosed} />
     </CardConteiner>
   )
 }

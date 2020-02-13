@@ -4,14 +4,16 @@ import moment from 'moment'
 
 const TimerContainer = styled.div`
   position: absolute;
-  top: -25px;
+  top: -30px;
   left: 200px;
+
   width: auto;
   max-height: 50px; 
   display: flex;
   color: white;
   font-size: 30px;
   overflow: hidden;
+  z-index: 4;
   p {
     font-size: 10px;
     margin-top: -10px;
@@ -32,13 +34,11 @@ export const Timer = ( { endsAt } ) => {
 
   useEffect( () => {
     let timer = setInterval( () => {
-      setDate(moment(endsAt) - moment())
+      setDate(moment(clone) - moment())
     }, 1000)
     
     return () => clearInterval(timer)
-  }, [date])
-
-  
+  }, [clone])
 
   const day = moment(date).day()
   const hour = moment(date).hour()
@@ -48,22 +48,21 @@ export const Timer = ( { endsAt } ) => {
   
   return (
     <TimerContainer>
-     
       <div>
         {day} :
-        <p>день</p>
+        <p>дней</p>
       </div>
       <div>
         {hour}:
-        <p>hour</p>
+        <p>часов</p>
       </div>
       <div>
         {minute}:
-        <p>minute</p>
+        <p>минут</p>
       </div>
       <div>
         {second}
-        <p>second</p>
+        <p>секунд</p>
       </div>
     </TimerContainer>
   )

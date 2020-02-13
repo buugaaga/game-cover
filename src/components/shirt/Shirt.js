@@ -6,7 +6,7 @@ const ShirtContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 0;
+  padding: 0 20px 0 0;
   margin: 0;
 
   button {
@@ -14,19 +14,17 @@ const ShirtContainer = styled.div`
     border-radius: 4px;
     background-color: #eecc55;
     height: 25px;
-    width: 100px;
+    width: 110px;
     padding: 0;
     margin: 0;
     font-size: .7rem;
-    
     letter-spacing: -1px;
   }
 `
 
-export const Shirt = ({ isFull }) => (
+export const Shirt = ({ isFull, setClosed }) => (
   <ShirtContainer> 
-    <button>
-      Поставить рубашку
-    </button>    
+    { isFull ? <button onClick={() => setClosed(true)}>Поставить рубашку</button>  :  null }
+    
   </ShirtContainer>
 )

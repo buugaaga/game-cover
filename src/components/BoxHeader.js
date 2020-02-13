@@ -4,7 +4,8 @@ import header from '../images/header.png'
 
 const BoxContainer = styled.div`
   position: absolute;
-  top: 0;
+  top: -120px;
+
   height: 150px;
   width: 550px;
   z-index: 2;

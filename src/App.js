@@ -2,7 +2,6 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import GameCore from './components/GameCore'
-import BoxHeader from './components/BoxHeader'
 
 import  sideBg  from './images/side-bg.jpg'
 import bgScreen from './images/background-screen.png'
@@ -15,13 +14,16 @@ const Container = styled.div`
   background-image: url(${sideBg});
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center center; 
   display: flex;
   justify-content: center;
-  
+
    & > div {
+    margin: 0 0;
     height: 100%;
-    min-width: 700px;
+    flex: 1 1 ;
+    max-width: 700px;
+    min-width: 400px;
     background-color: #333;
     background-image: url(${bgScreen});
     background-size: cover;
@@ -40,7 +42,6 @@ function App() {
   return (
     <Container>
       <div>
-        <BoxHeader />
         <GameCore /> 
       </div>
     </Container>

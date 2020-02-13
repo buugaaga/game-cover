@@ -5,6 +5,7 @@ import axios from 'axios'
 import GameCard from './GameCard'
 import Loading from './Loading'
 import Timer from './timer'
+import BoxHeader from './BoxHeader'
 
 import bgImage from '../images/background.png'
 import kings from '../images/task-kings.png'
@@ -17,18 +18,20 @@ const GameBox = styled.div`
   display: flex;
   flex-flow: column wrap;
   justify-content: start;
-  height: 350px;
-  width: 550px;
+  height: 300px;
+  width: 500px;
   background-color: opacity;
   background-image: url(${bgImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 20px;
+  padding: 25px 20px 20px 20px;
+  margin: 0;
 `
 
 function GameCore() {
 
+  const [ isClosed, setClosed ] = useState(false)
   const [ isLoading, setLoading ] = useState(false)
   const [ { endsAt, tasks}, setObjData ] = useState({endsAt: "0", tasks: []})
 
@@ -47,11 +50,12 @@ function GameCore() {
     fetchData(url)
   }, [])
 
-  console.log(endsAt)
-
-
+  console.log(endsAt)  
+  if (isClosed) return null 
   return (
-    <GameBox>{
+    <GameBox>
+      <BoxHeader />
+      {
       isLoading ? <Loading /> :
       <>
         <Timer endsAt={endsAt} />
@@ -70,6 +74,7 @@ function GameCore() {
             }
             progress={task.progress} 
             isFull={ task.progress === 100 } 
+            setClosed={setClosed}
             key={id} 
             />
           ))
