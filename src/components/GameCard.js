@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import ProgressBar from './ProgressBar'
+import Shirt from './shirt'
 
 const CardConteiner = styled.div`
   display: flex;
@@ -28,14 +29,6 @@ const CardConteiner = styled.div`
       display: block;
       padding-right: 80px;
     }
-    
-  }
-  div:nth-of-type(3) {
-    flex: 1;
-    button {
-      height: 30px;
-      border-radius: 10px;
-    }
   }
 `
 
@@ -49,9 +42,7 @@ export default function GameCard({ pathImg, progress, isFull, phrasa }) {
         <p><b>{phrasa}</b></p>
         <ProgressBar progress={progress} />
       </div>
-      <div>
-      { isFull ? <button>поставить рубашку</button> : null }
-      </div>
+      <Shirt isFull={isFull} />
     </CardConteiner>
   )
 }

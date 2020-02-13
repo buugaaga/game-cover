@@ -47,6 +47,9 @@ function GameCore() {
     fetchData(url)
   }, [])
 
+  console.log(endsAt)
+
+
   return (
     <GameBox>{
       isLoading ? <Loading /> :
