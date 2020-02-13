@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/game-cover/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/game-cover/static/js/main.b5a3babb.chunk.js",
+    "main.js.map": "/game-cover/static/js/main.b5a3babb.chunk.js.map",
+    "runtime-main.js": "/game-cover/static/js/runtime-main.62c12bfe.js",
+    "runtime-main.js.map": "/game-cover/static/js/runtime-main.62c12bfe.js.map",
+    "static/js/2.5b024e9d.chunk.js": "/game-cover/static/js/2.5b024e9d.chunk.js",
+    "static/js/2.5b024e9d.chunk.js.map": "/game-cover/static/js/2.5b024e9d.chunk.js.map",
+    "index.html": "/game-cover/index.html",
+    "precache-manifest.0167ce722ac92e74fc2e0b94ba3362d0.js": "/game-cover/precache-manifest.0167ce722ac92e74fc2e0b94ba3362d0.js",
+    "service-worker.js": "/game-cover/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/game-cover/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.5b024e9d.chunk.js.LICENSE.txt": "/game-cover/static/js/2.5b024e9d.chunk.js.LICENSE.txt",
+    "static/media/background-screen.png": "/game-cover/static/media/background-screen.972e8bca.png",
+    "static/media/background.png": "/game-cover/static/media/background.3a11c8fa.png",
+    "static/media/header.png": "/game-cover/static/media/header.7bcf559d.png",
+    "static/media/side-bg.jpg": "/game-cover/static/media/side-bg.324c7fbc.jpg",
+    "static/media/task-kings.png": "/game-cover/static/media/task-kings.159c96d7.png",
+    "static/media/task-time.png": "/game-cover/static/media/task-time.94ef6c8d.png",
+    "static/media/task-tournaments.png": "/game-cover/static/media/task-tournaments.935c7e99.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62c12bfe.js",
+    "static/js/2.5b024e9d.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.b5a3babb.chunk.js"
+  ]
+}
