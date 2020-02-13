@@ -32,7 +32,7 @@ function GameCore() {
   const [ isLoading, setLoading ] = useState(false)
   const [ { endsAt, tasks}, setObjData ] = useState({endsAt: "0", tasks: []})
 
-  const url = "http://sol-tst.herokuapp.com/api/v1/tasks/"
+  const url = "https://cors-anywhere.herokuapp.com/http://sol-tst.herokuapp.com/api/v1/tasks/"
   useEffect( () => {
     let fetchData = async (url) => {
       try {
