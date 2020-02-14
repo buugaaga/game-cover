@@ -2,8 +2,8 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const BarContainer = styled.div`
-  width: 260px;
-  height: 10px;
+  width: 20vw;
+  height: 2vh;
   margin-top: 10px;
   border: 2px solid #ff9;
   border-radius: 50px;

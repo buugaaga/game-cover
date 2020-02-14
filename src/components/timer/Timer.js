@@ -4,18 +4,18 @@ import moment from 'moment'
 
 const TimerContainer = styled.div`
   position: absolute;
-  top: -30px;
-  left: 200px;
+  top: -3vh;
+  left: 16vw;
 
   width: auto;
   max-height: 50px; 
   display: flex;
   color: white;
-  font-size: 30px;
+  font-size: 1.7rem;
   overflow: hidden;
   z-index: 4;
   p {
-    font-size: 10px;
+    font-size: 0.5rem;
     margin-top: -10px;
     padding-top: 0;
   }

@@ -16,16 +16,16 @@ import { phrases } from '../datas/phrases'
 const GameBox = styled.div`
   position: relative;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: start;
-  height: 300px;
-  width: 500px;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 55vh;
+  width: 45vw;
   background-color: opacity;
   background-image: url(${bgImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 25px 20px 20px 20px;
+  padding: 1rem 1rem 1rem 1rem;
   margin: 0;
 `
 
@@ -58,27 +58,27 @@ function GameCore() {
       {
       isLoading ? <Loading /> :
       <>
-        <Timer endsAt={endsAt} />
-        {
-          tasks.map( (task, id) => (
-            <GameCard 
-            pathImg={
-              task.type === 'time' ? time :
-              task.type === 'kings' ? kings :
-              task.type === 'tournaments' ? tournaments : null
-            } 
-            phrasa={
-              task.type === 'time' ? phrases[0] :
-              task.type === 'kings' ? phrases[1] :
-              task.type === 'tournaments' ? phrases[2] : null 
-            }
-            progress={task.progress} 
-            isFull={ task.progress === 100 } 
-            setClosed={setClosed}
-            key={id} 
-            />
-          ))
-        }
+      <Timer endsAt={endsAt} />
+      {
+        tasks.map( (task, id) => (
+          <GameCard 
+          pathImg={
+            task.type === 'time' ? time :
+            task.type === 'kings' ? kings :
+            task.type === 'tournaments' ? tournaments : null
+          } 
+          phrasa={
+            task.type === 'time' ? phrases[0] :
+            task.type === 'kings' ? phrases[1] :
+            task.type === 'tournaments' ? phrases[2] : null 
+          }
+          progress={task.progress} 
+          isFull={ task.progress === 100 } 
+          setClosed={setClosed}
+          key={id} 
+          />
+        ))
+      }
       </>
       }
     </GameBox>

@@ -4,10 +4,10 @@ import header from '../images/header.png'
 
 const BoxContainer = styled.div`
   position: absolute;
-  top: -120px;
+  top: -16vh;
 
-  height: 150px;
-  width: 550px;
+  height: 20vh;
+  width: 50vw;
   z-index: 2;
   background-color: opacity;
   background-image: url(${header});

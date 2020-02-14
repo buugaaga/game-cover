@@ -12,7 +12,7 @@ const Container = styled.div`
   width: 100vw;
   background-color: #333;
   background-image: url(${sideBg});
-  background-size: cover;
+  background-size: 150% 100%;
   background-repeat: no-repeat;
   background-position: center center; 
   display: flex;
@@ -22,11 +22,11 @@ const Container = styled.div`
     margin: 0 0;
     height: 100%;
     flex: 1 1 ;
-    max-width: 700px;
-    min-width: 400px;
+    height: 100%;
+    max-width: 70vw;
     background-color: #333;
     background-image: url(${bgScreen});
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
 

@@ -14,7 +14,7 @@ const ShirtContainer = styled.div`
     border-radius: 4px;
     background-color: #eecc55;
     height: 25px;
-    width: 110px;
+    width: 10vw;
     padding: 0;
     margin: 0;
     font-size: .7rem;

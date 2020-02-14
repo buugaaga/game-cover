@@ -9,19 +9,20 @@ const CardConteiner = styled.div`
   flex-flow: row wrap;
   justify-content: start;
   margin: 0;
-  height: 70px;
+  height: 10vh;
   width: 100%;
-  padding: 12px 30px;
-  > div:nth-of-type(1) {
-    flex: 1;
+  padding: 1rem 1.2rem;
+  & > div:nth-of-type(1) {
+    flex: 1 1 10%;
     height: 100%;
+    max-width: 10vw;
     img {
       height: 100%;
-      width: 100%;
+      width: 10vh;
       transform: rotate(20deg);
     }
   }
-  div:nth-of-type(2) {
+  & > div:nth-of-type(2) {
     padding-left: 20px;
     padding-top: 0px;
     flex-flow: column nowrap;
@@ -30,6 +31,8 @@ const CardConteiner = styled.div`
       display: inline;
       padding-right: 20px;
       padding-bottom: 20px;
+      font-size: 2vh;
+      line-height: 1rem;
     }
   }
 `
