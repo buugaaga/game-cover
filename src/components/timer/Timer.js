@@ -14,32 +14,32 @@ const TimerContainer = styled.div`
   font-size: 1.7rem;
   overflow: hidden;
   z-index: 4;
+`
+
+const DateVal = styled.div`
+  flex: 1 1;
   p {
     font-size: 0.5rem;
     margin-top: -10px;
     padding-top: 0;
     text-align: center;
   }
-  & > div {
-    flex: 1 1 auto;
-  }
 `
 
 export const Timer = ( { endsAt } ) => {
   
   const endsAtVar = moment(endsAt)
-  const clone = moment(endsAtVar).clone()
-  const diff = moment(clone) - moment()
+  const diff = moment(endsAtVar) - moment()
 
   const [ date, setDate ] = useState(diff)
 
   useEffect( () => {
     let timer = setInterval( () => {
-      setDate(moment(clone) - moment())
+      setDate(moment(endsAtVar) - moment())
     }, 1000)
     
     return () => clearInterval(timer)
-  }, [clone])
+  }, [endsAtVar])
 
   const day = moment(date).date()
   const hour = moment(date).hour()
@@ -49,22 +49,22 @@ export const Timer = ( { endsAt } ) => {
   
   return (
     <TimerContainer>
-      <div>
+      <DateVal>
         {day}:
         <p>дней</p>
-      </div>
-      <div>
+      </DateVal>
+      <DateVal>
         {hour}:
         <p>часов</p>
-      </div>
-      <div>
+      </DateVal>
+      <DateVal>
         {minute}:
         <p>минут</p>
-      </div>
-      <div>
+      </DateVal>
+      <DateVal>
         {second}
         <p>секунд</p>
-      </div>
+      </DateVal>
     </TimerContainer>
   )
 }

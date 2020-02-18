@@ -15,7 +15,7 @@ const ShirtContainer = styled.div`
     
     background: radial-gradient(#EDDA79, #EDDA79, #EDDA79, #8E834A);
     height: 30px;
-    width: 150px;
+    width: 130px;
     padding: 0 ;
     margin: 0;
     font-size: .7rem;

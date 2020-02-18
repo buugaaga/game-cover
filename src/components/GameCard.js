@@ -15,11 +15,12 @@ const CardConteiner = styled.div`
   padding: 10px 20px;
 `
 
-const Img = styled.img`
-  height: 80px;
-  width: 65px;
+const Img = styled.div`
+  flex: 1 1 15%;
   margin: 0 20px;
-  transform: rotate(15deg);
+  img {
+    transform: rotate(15deg);
+  }
 `
 
 const TextAndProgressContainer = styled.div`
@@ -33,7 +34,9 @@ const TextAndProgressContainer = styled.div`
 function GameCard({ pathImg, progress, isFull, setClosed, phrasa }) {
   return (
     <CardConteiner>
-      <Img src={pathImg} alt="icon-game" />
+      <Img>
+        <img src={pathImg} alt="icon"></img>
+      </Img>
       <TextAndProgressContainer>
         <p><b>{phrasa}</b></p>
         <ProgressBar progress={progress} />
