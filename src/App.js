@@ -8,42 +8,37 @@ import bgScreen from './images/background-screen.png'
 
 
 const Container = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 800px;
+  width: 1920px;
   background-color: #333;
   background-image: url(${sideBg});
-  background-size: 150% 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center; 
   display: flex;
   justify-content: center;
-
-   & > div {
-    margin: 0 0;
-    height: 100%;
-    flex: 1 1 ;
-    height: 100%;
-    max-width: 70vw;
-    background-color: #333;
-    background-image: url(${bgScreen});
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 `
 
+const InnerContainer = styled.div`
+  height: 800px;
+  width: 894px;
+  background-color: #333;
+  background-image: url(${bgScreen});
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 function App() {
 
   return (
     <Container>
-      <div>
+      <InnerContainer>
         <GameCore /> 
-      </div>
+      </InnerContainer>
     </Container>
   );
 }

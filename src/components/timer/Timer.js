@@ -4,8 +4,8 @@ import moment from 'moment'
 
 const TimerContainer = styled.div`
   position: absolute;
-  top: -3vh;
-  left: 16vw;
+  top: -24px;
+  left: 280px;
 
   width: auto;
   max-height: 50px; 
@@ -18,14 +18,15 @@ const TimerContainer = styled.div`
     font-size: 0.5rem;
     margin-top: -10px;
     padding-top: 0;
+    text-align: center;
   }
-  > div {
+  & > div {
     flex: 1 1 auto;
   }
 `
 
 export const Timer = ( { endsAt } ) => {
-
+  
   const endsAtVar = moment(endsAt)
   const clone = moment(endsAtVar).clone()
   const diff = moment(clone) - moment()
@@ -40,7 +41,7 @@ export const Timer = ( { endsAt } ) => {
     return () => clearInterval(timer)
   }, [clone])
 
-  const day = moment(date).day()
+  const day = moment(date).date()
   const hour = moment(date).hour()
   const minute = moment(date).minute()
   const second = moment(date).second()
@@ -49,7 +50,7 @@ export const Timer = ( { endsAt } ) => {
   return (
     <TimerContainer>
       <div>
-        {day} :
+        {day}:
         <p>дней</p>
       </div>
       <div>

@@ -13,20 +13,19 @@ import time from '../images/task-time.png'
 import tournaments from '../images/task-tournaments.png'
 import { phrases } from '../datas/phrases'
 
-const GameBox = styled.div`
+const GameContainer = styled.div`
   position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  height: 55vh;
-  width: 45vw;
+  height: 437px;
+  width: 647px;
+  padding: 25px 20px 50px 20px;
   background-color: opacity;
   background-image: url(${bgImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 `
 
 function GameCore() {
@@ -53,35 +52,35 @@ function GameCore() {
   console.log(endsAt)  
   if (isClosed) return null 
   return (
-    <GameBox>
+    <GameContainer>
       <BoxHeader />
       {
       isLoading ? <Loading /> :
       <>
-      <Timer endsAt={endsAt} />
-      {
-        tasks.map( (task, id) => (
-          <GameCard 
-          pathImg={
-            task.type === 'time' ? time :
-            task.type === 'kings' ? kings :
-            task.type === 'tournaments' ? tournaments : null
-          } 
-          phrasa={
-            task.type === 'time' ? phrases[0] :
-            task.type === 'kings' ? phrases[1] :
-            task.type === 'tournaments' ? phrases[2] : null 
-          }
-          progress={task.progress} 
-          isFull={ task.progress === 100 } 
-          setClosed={setClosed}
-          key={id} 
-          />
-        ))
-      }
+        <Timer endsAt={endsAt} />
+        {
+          tasks.map( (task, id) => (
+            <GameCard 
+              pathImg={
+                task.type === 'time' ? time :
+                task.type === 'kings' ? kings :
+                task.type === 'tournaments' ? tournaments : null
+              } 
+              phrasa={
+                task.type === 'time' ? phrases.time :
+                task.type === 'kings' ? phrases.kings :
+                task.type === 'tournaments' ? phrases.tournaments : null 
+              }
+              progress={task.progress} 
+              isFull={ task.progress === 100 } 
+              setClosed={setClosed}
+              key={id} 
+            />
+          ))
+        }
       </>
       }
-    </GameBox>
+    </GameContainer>
   )
 }
 

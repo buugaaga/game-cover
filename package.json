@@ -90,6 +90,7 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-emotion": "^10.0.27",
     "gh-pages": "^2.2.0"
   },
   "jest": {

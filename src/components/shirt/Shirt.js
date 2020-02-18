@@ -6,19 +6,20 @@ const ShirtContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 0 20px 0 0;
+  padding: 0 20px 0 20px;
   margin: 0;
 
   button {
-    border: 2px solid #333;
+    border: 2px solid #171407;
     border-radius: 4px;
-    background-color: #eecc55;
-    height: 25px;
-    width: 10vw;
-    padding: 0;
+    
+    background: radial-gradient(#EDDA79, #EDDA79, #EDDA79, #8E834A);
+    height: 30px;
+    width: 150px;
+    padding: 0 ;
     margin: 0;
     font-size: .7rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
 `
 

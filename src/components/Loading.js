@@ -2,7 +2,6 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const CircleContainer = styled.div`
-    
     height: 100px;
     width: 100px;
     color: rgba($loadercolor, 0.2);
@@ -15,17 +14,16 @@ const CircleContainer = styled.div`
     border-right-color: grey;
     animation: rotate 1s linear infinite;
 
-
 @keyframes rotate {
     0%{transform: rotate(0);}
     100%{transform: rotate(360deg);}
 }
 `
 
-export default function Loading() {
+function Loading() {
   return (
-    <CircleContainer>
-      
-    </CircleContainer>
+    <CircleContainer />
   )
 }
+
+export default Loading

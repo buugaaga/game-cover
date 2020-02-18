@@ -6,48 +6,41 @@ import Shirt from './shirt'
 
 const CardConteiner = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row no-wrap;
   justify-content: start;
+  box-sizing: border-box;
   margin: 0;
-  height: 10vh;
+  height: 140px;
   width: 100%;
-  padding: 1rem 1.2rem;
-  & > div:nth-of-type(1) {
-    flex: 1 1 10%;
-    height: 100%;
-    max-width: 10vw;
-    img {
-      height: 100%;
-      width: 10vh;
-      transform: rotate(20deg);
-    }
-  }
-  & > div:nth-of-type(2) {
-    padding-left: 20px;
-    padding-top: 0px;
-    flex-flow: column nowrap;
-    flex: 3;
-    p { 
-      display: inline;
-      padding-right: 20px;
-      padding-bottom: 20px;
-      font-size: 2vh;
-      line-height: 1rem;
-    }
+  padding: 10px 20px;
+`
+
+const Img = styled.img`
+  height: 80px;
+  width: 65px;
+  margin: 0 20px;
+  transform: rotate(15deg);
+`
+
+const TextAndProgressContainer = styled.div`
+  flex: 1 1 70%;
+  p {
+    font-size: 1.2rem;
+    width: 300px;
   }
 `
 
-export default function GameCard({ pathImg, progress, isFull, setClosed, phrasa }) {
+function GameCard({ pathImg, progress, isFull, setClosed, phrasa }) {
   return (
     <CardConteiner>
-      <div>
-        <img src={pathImg} alt="icon-game"></img>
-      </div>
-      <div>
+      <Img src={pathImg} alt="icon-game" />
+      <TextAndProgressContainer>
         <p><b>{phrasa}</b></p>
         <ProgressBar progress={progress} />
-      </div>
+      </TextAndProgressContainer>
       <Shirt isFull={isFull} setClosed={setClosed} />
     </CardConteiner>
   )
 }
+
+export default GameCard
