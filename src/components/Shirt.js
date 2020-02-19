@@ -23,9 +23,11 @@ const ShirtContainer = styled.div`
   }
 `
 
-export const Shirt = ({ isFull, setClosed }) => (
+const Shirt = ({ isFull, setClosed }) => (
   <ShirtContainer> 
     { isFull ? <button onClick={() => setClosed(true)}>Поставить рубашку</button>  :  null }
     
   </ShirtContainer>
 )
+
+export default Shirt

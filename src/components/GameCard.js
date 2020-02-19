@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import ProgressBar from './ProgressBar'
-import Shirt from './shirt'
+import Shirt from './Shirt'
 
 const CardConteiner = styled.div`
   display: flex;

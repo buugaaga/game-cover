@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import GameCard from './GameCard'
 import Loading from './Loading'
-import Timer from './timer'
+import Timer from './Timer'
 import BoxHeader from './BoxHeader'
 
 import bgImage from '../images/background.png'
@@ -40,6 +40,7 @@ function GameCore() {
       try {
         setLoading(true)
         let result = await axios(url)
+        console.log(result)  
         setObjData(result.data)
         setLoading(false)
       } catch(err) {
@@ -49,7 +50,7 @@ function GameCore() {
     fetchData(url)
   }, [])
 
-  console.log(endsAt)  
+  
   if (isClosed) return null 
   return (
     <GameContainer>

@@ -26,7 +26,7 @@ const DateVal = styled.div`
   }
 `
 
-export const Timer = ( { endsAt } ) => {
+const Timer = ( { endsAt } ) => {
   
   const endsAtVar = moment(endsAt)
   const diff = moment(endsAtVar) - moment()
@@ -68,3 +68,5 @@ export const Timer = ( { endsAt } ) => {
     </TimerContainer>
   )
 }
+
+export default Timer
