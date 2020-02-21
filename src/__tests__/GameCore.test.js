@@ -1,14 +1,12 @@
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
-import { render, fireEvent, waitForElement, screen } from '@testing-library/react'
+import { render,  waitForElement, screen, cleanup } from '@testing-library/react'
 import axiosMock from 'axios'
 
 import GameCore from '../components/GameCore'
-import Timer from '../components/Timer'
 
 
-
-test("hides GameCore component when the Shir is clicked", async () => {
+test("test GameCore component after axios fetch event", async () => {
 
   jest.mock('axios')
   const fakeServerResponse = [
@@ -30,8 +28,9 @@ test("hides GameCore component when the Shir is clicked", async () => {
 
   render(<GameCore />)
 
-  const timeComponent = await waitForElement(() => screen.getByTestId("testCoreTime"))
+  const timeComponent = await waitForElement(() => screen.getByTestId("gameContainer"))
   
-  expect(timeComponent).toBeDefined()
+  expect(timeComponent).toBeInTheDocument()
   
+  cleanup()
 })
