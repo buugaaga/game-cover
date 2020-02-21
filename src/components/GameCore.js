@@ -53,7 +53,7 @@ function GameCore() {
   
   if (isClosed) return null 
   return (
-    <GameContainer>
+    <GameContainer >
       <BoxHeader />
       {
       isLoading ? <Loading /> :

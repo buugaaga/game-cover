@@ -12,15 +12,15 @@ const BarContainer = styled.div`
 
 const Filling = styled.div`
     height: 100%;
-    width: ${ props => props.progress }%;
+    width: ${ props => props.progress || 0 }%;
     background-color: #909B5A;
     border-radius: inherit;
 `
 
 export default function ProgressBar({progress}) {
   return (
-    <BarContainer >
-      <Filling progress={progress} />
+    <BarContainer>
+      <Filling progress={progress} data-testid='progressTest'/>
     </ BarContainer>
   )
 }
