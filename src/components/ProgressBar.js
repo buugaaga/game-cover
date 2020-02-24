@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
+// прогресс бар сделал с помощью двух div и удобным методом emotion/styled
 const BarContainer = styled.div`
   width: 320px;
   height: 2vh;

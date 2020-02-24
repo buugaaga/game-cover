@@ -29,13 +29,14 @@ const GameContainer = styled.div`
 `
 
 function GameCore() {
-
+// назанчаю состояния для закрытия всей игры при нажатия на рубашку, для спинера загрузки и данные с эндпоинта
   const [ isClosed, setClosed ] = useState(false)
   const [ isLoading, setLoading ] = useState(false)
   const [ { endsAt, tasks}, setObjData ] = useState({endsAt: "0", tasks: []})
 
   const url = "https://cors-anywhere.herokuapp.com/http://sol-tst.herokuapp.com/api/v1/tasks/"
   useEffect( () => {
+  // извлечение данных и проверка на ошибку
     let fetchData = async (url) => {
       try {
         setLoading(true)
@@ -49,7 +50,7 @@ function GameCore() {
     }
     fetchData(url)
   }, [])
-
+// в задании есть задача, чтобы было только 3 задачи, появляющиеся на экране
   const filterTasks = tasks.filter((task) => tasks.indexOf(task) < 3 )
 
   if (isClosed) return null 

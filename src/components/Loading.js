@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
+//спиннер простой на css
+
 const CircleContainer = styled.div`
     height: 100px;
     width: 100px;
@@ -20,7 +22,8 @@ const CircleContainer = styled.div`
 }
 `
 
-function Loading() {
+
+const Loading = () => {
   return (
     <CircleContainer />
   )

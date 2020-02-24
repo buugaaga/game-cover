@@ -28,7 +28,7 @@ const DateVal = styled.div`
 
 const Timer = ( { endsAt } ) => {
   
-  const endsAtVar = moment(endsAt)
+  const endsAtVar = moment(endsAt).clone()
   const diff = moment(endsAtVar) - moment()
 
   const [ date, setDate ] = useState(diff)
