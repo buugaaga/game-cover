@@ -17,6 +17,10 @@ const Container = styled.div`
   background-position: center center; 
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 1200px) {
+    width: 1200px;
+    background-size: 150% 100%;
+  }
 `
 
 const InnerContainer = styled.div`
