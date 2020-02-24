@@ -50,7 +50,8 @@ function GameCore() {
     fetchData(url)
   }, [])
 
-  
+  const filterTasks = tasks.filter((task) => tasks.indexOf(task) < 3 )
+
   if (isClosed) return null 
   return (
     <GameContainer  data-testid='gameContainer'>
@@ -60,7 +61,7 @@ function GameCore() {
       <>
         <Timer endsAt={endsAt} />
         {
-          tasks.map( (task, id) => (
+          filterTasks.map( (task, id) => (
             <GameCard 
               pathImg={
                 task.type === 'time' ? time :
